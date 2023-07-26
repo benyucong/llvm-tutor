@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.13.4)
 project(llvm-tutor)
+# Set the C and C++ compilers
+set(CMAKE_C_COMPILER "/usr/bin/clang-16")
+set(CMAKE_CXX_COMPILER "/usr/bin/clang++-16")
 
 #===============================================================================
 # 1. VERIFY LLVM INSTALLATION DIR
 # This is just a bit of a sanity checking.
 #===============================================================================
-set(LT_LLVM_INSTALL_DIR "" CACHE PATH "LLVM installation directory")
+set(LT_LLVM_INSTALL_DIR "/usr/lib/llvm-16/" CACHE PATH "LLVM installation directory")
 
 # 1.1 Check the "include" directory
 set(LT_LLVM_INCLUDE_DIR "${LT_LLVM_INSTALL_DIR}/include/llvm")
